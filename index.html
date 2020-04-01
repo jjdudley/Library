@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Library Project</title>
+        <meta name="viewport" content="width=device-width, initial-scale =1.0">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <h1 class="title">Library</h1>
+            <button id="add-book">Add Book</button>
+            <div class="bg-modal">
+                <div class="modal-content">
+                    <div class="close">+</div>
+                    <form id="new-book-form">
+                        <input data-title type="text" placeholder="Title">
+                        <input data-author type="text" placeholder="Author">
+                        <input data-pages type="text" placeholder="Pages">
+                        <input data-read type="text" placeholder="Read?">
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+
+</html>
