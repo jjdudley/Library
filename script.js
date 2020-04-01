@@ -1,5 +1,7 @@
 let booksInLibrary = 0;
 const myLibrary = [];
+let readButtonOn = true;
+let newCardOn = true;
 
 function Book (title, author, pages, read) {
     this.title = title;
@@ -17,7 +19,33 @@ function render() {
         let newCard = document.createElement('h1');
         newCard.classList = 'newcard';
         newCard.innerText = `${myLibrary[i].title} by ${myLibrary[i].author}, ${myLibrary[i].pages}, ${myLibrary[i].read}`;
+
+        let readButton = document.createElement('button');
+        readButton.classList = 'read-button-on';
+        readButton.innerText = 'Read';
+        readButton.addEventListener('click', () => {
+            if (readButtonOn) {
+                readButton.classList.remove('read-button-on')
+                readButton.classList = 'read-button-off';
+                readButton.innerText = 'Not read yet';
+                readButtonOn = false;
+            } else if (!readButtonOn){
+                readButton.classList.remove('read-button-off');
+                readButton.innerText = 'Read';
+                readButtonOn = true;
+            }
+        })
+
+        let removeButton = document.createElement('button');
+        removeButton.classList = 'remove-button';
+        removeButton.innerText = '+';
+        removeButton.addEventListener('click', () => {
+                newCard.style.display = 'none';
+        });
+
         document.body.appendChild(newCard);
+        newCard.appendChild(readButton);
+        newCard.appendChild(removeButton);
     };
 };
 
