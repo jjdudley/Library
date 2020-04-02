@@ -1,6 +1,8 @@
-.newcard {
-    border: solid;
-    border-color: black;
+body, html {
+    height: 100%;
+    display: grid;
+    font-family: 'Open Sans', sans-serif;
+    background-color: white;
 }
 
 .bg-modal {
@@ -40,6 +42,75 @@ input {
     transform: rotate(45deg);
 }
 
+#library-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9m;
+    min-width: 400px;
+}
+
+#table-title {
+    font-weight: bolder;
+    border-bottom: solid black;
+    border-width: 0.15rem;
+}
+
+.title-cell {
+    border-top: solid rgb(124, 124, 124);
+    border-width: 0.05rem;
+    font-weight: lighter;
+    color: rgb(124, 124, 124);
+}
+
+#table-author {
+    font-weight: bolder;
+    border-bottom: solid black;
+    border-width: 0.15rem;
+}
+
+.author-cell {
+    border-top: solid rgb(124, 124, 124);
+    border-width: 0.05rem;
+    font-weight: lighter;
+    color: rgb(124, 124, 124);
+}
+
+#table-pages {
+    font-weight: bolder;
+    border-bottom: solid black;
+    border-width: 0.15rem;
+}
+
+.pages-cell {
+    border-top: solid rgb(124, 124, 124);
+    border-width: 0.05rem;
+    font-weight: lighter;
+    color: rgb(124, 124, 124);
+}
+
+#table-status {
+    font-weight: bolder;
+    border-bottom: solid black;
+    border-width: 0.15rem;
+}
+
+.status-cell {
+    border-top: solid rgb(124, 124, 124);
+    border-width: 0.05rem;
+    font-weight: lighter;
+    color: rgb(124, 124, 124);
+}
+
+#table-delete {
+    border-bottom: solid black;
+    border-width: 0.15rem;
+}
+
+.delete-cell {
+    border-top: solid rgb(124, 124, 124);
+    border-width: 0.05rem;
+}
+
 .read-button-on {
     color: black;
     background-color: white;
@@ -63,9 +134,9 @@ input {
 
 .remove-button {
     color: black;
+    border: none;
     background-color: transparent;
     font-size: 42px;
-    border: none;
     transform: rotate(45deg);
 }
 
