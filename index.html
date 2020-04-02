@@ -4,34 +4,47 @@
         <title>Library Project</title>
         <meta name="viewport" content="width=device-width, initial-scale =1.0">
         <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     </head>
 
     <body>
         <div class="container">
-            <h1 class="title">Library</h1>
-            <h1 class="Books">Books</h1>
+            <div id="header">
+                <h1 class="title">Library</h1>
+            </div>
             <div class="bg-modal">
                 <div class="modal-content">
                     <div class="close">+</div>
                     <form id="new-book-form">
-                        <input data-title type="text" placeholder="Title">
-                        <input data-author type="text" placeholder="Author">
-                        <input data-pages type="text" placeholder="Pages">
-                        <input data-read type="text" placeholder="Read?">
-                        <button type="submit">Submit</button>
+                        <h1 id="modal-heading">New Book</h1>
+                        <h2 class="modal-element">Title</h2>
+                        <input data-title type="text" id="modal-input" class="modal-element" placeholder="Title">
+                        <h2 class="modal-element">Author</h2>
+                        <input data-author type="text" id="modal-input" class="modal-element" placeholder="Author">
+                        <h2  class="modal-element">Pages</h2>
+                        <input data-pages type="text" id="modal-input" class="modal-element" placeholder="Pages">
+                        <h2 class="modal-element">Read Status?</h2>
+                        <select id="read">
+                                <option value="Read">Read</option>
+                                <option value="Not read yet">Not read</option>
+                        </select><br>
+                        <button type="submit" id="submit-button" class="modal-element">Add Book</button>
                     </form>
                 </div>
             </div>
-            <table id="library-table">
-                <tr>
-                    <td id="table-title">Title</td>
-                    <td id="table-author">Author</td>
-                    <td id="table-pages">Pages</td>
-                    <td id="table-status">Status</td>
-                    <td id="table-delete"></td>
-                </tr>
-            </table>
-            <button id="add-book">Add Book</button>
+            <div id="table-container">
+                <h1 class="books">Books</h1>
+                    <table id="library-table">
+                        <tr>
+                        <td id="table-title">Title</td>
+                        <td id="table-author">Author</td>
+                        <td id="table-pages">Pages</td>
+                        <td id="table-status">Status</td>
+                        <td id="table-delete"></td>
+                        </tr>
+                    </table>
+                <button id="add-book">Add Book</button>
+            </div>
         </div>
         <script src="script.js"></script>
     </body>

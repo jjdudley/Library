@@ -37,8 +37,14 @@ function render() {
         deleteCell.classList = 'delete-cell';
 
         let readButton = document.createElement('button');
-        readButton.classList = 'read-button-on';
-        readButton.innerText = 'Read';
+        readButton.innerText = `${myLibrary[i].read}`;
+        if (readButton.innerText === 'Read') {
+            readButtonOn = true;
+            readButton.classList = 'read-button-on';
+        } else if (readButton.innerText === 'Not read yet') {
+            readButtonOn = false;
+            readButton.classList = 'read-button-off';
+        }
         readButton.addEventListener('click', () => {
             if (readButtonOn) {
                 readButton.classList.remove('read-button-on')
@@ -47,6 +53,7 @@ function render() {
                 readButtonOn = false;
             } else if (!readButtonOn){
                 readButton.classList.remove('read-button-off');
+                readButton.classList = 'read-button-on';
                 readButton.innerText = 'Read';
                 readButtonOn = true;
             }
@@ -68,8 +75,8 @@ function render() {
     };
 };
 
-let newbook1 = new Book('The Hobbit', 'J.R.R. Tolkein', '255', 'not read yet');
-let newbook2 = new Book('Hatchet', 'Gary Paulson', 'Ha', 'Whatever');
+let newbook1 = new Book('The Hobbit', 'J.R.R. Tolkien', '255', 'Read');
+let newbook2 = new Book('Hatchet', 'Gary Paulsen', '195', 'Not read yet');
 
 addBookToLibrary(newbook1);
 addBookToLibrary(newbook2);
@@ -87,10 +94,11 @@ document.querySelector('.close').addEventListener('click', function() {
 const newBookForm = document.forms['new-book-form'];
 newBookForm.addEventListener('submit', function(e) {
     e.preventDefault();
+    
     const titleValue = newBookForm.querySelector('[data-title]').value;
     const authorValue = newBookForm.querySelector('[data-author]').value;
     const pagesValue = newBookForm.querySelector('[data-pages]').value;
-    const readValue = newBookForm.querySelector('[data-read]').value;
+    const readValue = document.getElementById('read').value;
     document.querySelector('.bg-modal').style.display = 'none';
     
     let freshbook = new Book(titleValue, authorValue, pagesValue, readValue);

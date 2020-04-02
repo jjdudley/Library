@@ -1,8 +1,28 @@
-body, html {
-    height: 100%;
-    display: grid;
+* {
+    margin: 0;
+    padding: 0;
     font-family: 'Open Sans', sans-serif;
-    background-color: white;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+::placeholder {
+    color: lightgray;
+}
+
+#header {
+    margin: auto;
+    border: none;
+    height: 160px;
+    width: 100%;
+    background-color: rgb(0, 99, 145);
+}
+
+.title {
+    color: white;
+    font-size: 1.9rem;
+    padding-top: 50px;
+    padding-left: 120px;
 }
 
 .bg-modal {
@@ -18,20 +38,31 @@ body, html {
 }
 
 .modal-content {
-    width: 500px;
-    height: 300px;
+    width: 600px;
+    height: 430px;
     background-color: white;
-    border-radius: 4px;
-    text-align: center;
+    border-radius: 6px;
+    text-align: left;
     padding: 20px;
     position: relative;
     z-index: 9999; 
 }
 
 input {
-    width: 50%;
+    width: 590px;
+    height: 1.5rem;
     display: block;
     margin: 0 auto;
+    border: solid lightgray;
+    border-width: .05rem;
+    border-radius: 4px;
+    color: rgb(49, 55, 58);
+    height: 38px;
+    padding-left: 10px;
+}
+
+input:hover {
+    border-color: rgb(155, 155, 155);
 }
 
 .close {
@@ -42,102 +73,184 @@ input {
     transform: rotate(45deg);
 }
 
+#table-container {
+    margin-top: 50px;
+    margin-left: 120px;
+}
+
+.modal-element {
+    margin: 10px 0;
+    font-size: 12pt;
+}
+
+#modal-heading {
+    margin-bottom: 25px;
+}
+
+#submit-button {
+    color: white;
+    background-color: rgb(0, 125, 184);
+    padding: 0.45rem 0.8rem;
+    border: solid rgb(0, 125, 184);
+    border-radius: 4px;
+    border-width: 0.05rem;
+    outline: none;
+}
+
+#read {
+    color: rgb(103, 116, 122);
+    background-color: white;
+    height: 2.35rem;
+    width: 6.2rem;
+    padding: 0.45rem 0.8rem;
+    font-size: 12pt;
+    border: solid lightgray;
+    border-color: lightgrey;
+    border-radius: 4px;
+    border-width: 0.05rem;
+    outline: none;
+}
+
+#read:hover {
+    border-color: rgb(155, 155, 155);
+    cursor: pointer;
+}
+
+.books {
+    font-size: 1.9rem;
+}
+
 #library-table {
     border-collapse: collapse;
     margin: 25px 0;
     font-size: 0.9m;
-    min-width: 400px;
+    min-width: 550px;
 }
 
 #table-title {
     font-weight: bolder;
+    padding-bottom: 0.5rem;
     border-bottom: solid black;
     border-width: 0.15rem;
 }
 
 .title-cell {
-    border-top: solid rgb(124, 124, 124);
+    border-top: solid rgb(103, 116, 122);
     border-width: 0.05rem;
     font-weight: lighter;
-    color: rgb(124, 124, 124);
+    color: rgb(103, 116, 122);
 }
 
 #table-author {
     font-weight: bolder;
+    padding-bottom: 0.5rem;
     border-bottom: solid black;
     border-width: 0.15rem;
 }
 
 .author-cell {
-    border-top: solid rgb(124, 124, 124);
+    border-top: solid rgb(103, 116, 122);
     border-width: 0.05rem;
     font-weight: lighter;
-    color: rgb(124, 124, 124);
+    color: rgb(103, 116, 122);
 }
 
 #table-pages {
     font-weight: bolder;
+    padding-bottom: 0.5rem;
     border-bottom: solid black;
     border-width: 0.15rem;
 }
 
 .pages-cell {
-    border-top: solid rgb(124, 124, 124);
+    border-top: solid rgb(103, 116, 122);
     border-width: 0.05rem;
     font-weight: lighter;
-    color: rgb(124, 124, 124);
+    color: rgb(103, 116, 122);
 }
 
 #table-status {
     font-weight: bolder;
+    padding-bottom: 0.5rem;
     border-bottom: solid black;
     border-width: 0.15rem;
 }
 
 .status-cell {
-    border-top: solid rgb(124, 124, 124);
+    border-top: solid rgb(103, 116, 122);
     border-width: 0.05rem;
     font-weight: lighter;
-    color: rgb(124, 124, 124);
+    color: rgb(103, 116, 122);
 }
 
 #table-delete {
+    padding-bottom: 0.5rem;
     border-bottom: solid black;
     border-width: 0.15rem;
 }
 
 .delete-cell {
-    border-top: solid rgb(124, 124, 124);
+    border-top: solid rgb(103, 116, 122);
     border-width: 0.05rem;
 }
 
 .read-button-on {
-    color: black;
-    background-color: white;
-}
-
-.read-button-on:active {
-    color: black;
-    background-color: gray;
-}
-
-.read-button-off {
-    color: black;
-    background-color: rgba(135, 183, 214, 0.548);
+    color: white;
+    background-color: rgb(0, 125, 184);
+    padding: 0.45rem 0.8rem;
+    border: solid rgb(0, 125, 184);
+    border-radius: 7px;
+    border-width: 0.05rem;
     outline: none;
 }
 
-.read-button-off:active {
-    color: black;
-    background-color: gray;
+.read-button-on:hover {
+    background-color: rgb(0, 107, 156);
+    cursor: pointer;
 }
 
+.read-button-off {
+    color: rgb(103, 116, 122);
+    background-color: white;
+    padding: 0.45rem 0.8rem;
+    border: solid lightgray;
+    border-radius: 7px;
+    border-width: 0.05rem;
+    outline: none;
+}
+
+.read-button-off:hover {
+    border-color: rgb(103, 116, 122);
+    cursor: pointer;
+}
+
+
 .remove-button {
-    color: black;
+    color: rgb(103, 116, 122);
     border: none;
     background-color: transparent;
     font-size: 42px;
     transform: rotate(45deg);
+    outline: none;
+}
+
+.remove-button:hover {
+    cursor: pointer;
+}
+
+#add-book {
+    color: white;
+    background-color: rgb(117, 132, 139);
+    padding: 0.45rem 0.8rem;
+    border: solid rgb(117, 132, 139);
+    border-radius: 7px;
+    border-width: 0.05rem;
+    outline: none;
+}
+
+#add-book:hover {
+    background-color: rgb(93, 105, 110);
+    cursor: pointer;
 }
 
 
