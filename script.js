@@ -76,7 +76,7 @@ function render() {
 };
 
 let newbook1 = new Book('The Hobbit', 'J.R.R. Tolkien', '255', 'Read');
-let newbook2 = new Book('Hatchet', 'Gary Paulsen', '195', 'Not read yet');
+let newbook2 = new Book('Tender Is The Night', 'F. Scott Fitzgerald', '336', 'Not read yet');
 
 addBookToLibrary(newbook1);
 addBookToLibrary(newbook2);
@@ -112,70 +112,3 @@ newBookForm.addEventListener('submit', function(e) {
     render();
     };
 });
-
-
-
-
-
-
-
-
-
-
-/* function render() {
-    for(let i = booksInLibrary; i < myLibrary.length; i++) {
-        let newCard = document.createElement('h1');
-        newCard.classList = 'newcard';
-        newCard.innerText = `${myLibrary[i].title} by ${myLibrary[i].author}, ${myLibrary[i].pages}, ${myLibrary[i].read}`;
-
-        let readButton = document.createElement('button');
-        readButton.classList = 'read-button-on';
-        readButton.innerText = 'Read';
-        readButton.addEventListener('click', () => {
-            if (readButtonOn) {
-                readButton.classList.remove('read-button-on')
-                readButton.classList = 'read-button-off';
-                readButton.innerText = 'Not read yet';
-                readButtonOn = false;
-            } else if (!readButtonOn){
-                readButton.classList.remove('read-button-off');
-                readButton.innerText = 'Read';
-                readButtonOn = true;
-            }
-        })
-
-        let removeButton = document.createElement('button');
-        removeButton.classList = 'remove-button';
-        removeButton.innerText = '+';
-        removeButton.addEventListener('click', () => {
-                newCard.style.display = 'none';
-        });
-
-        document.body.appendChild(newCard);
-        newCard.appendChild(readButton);
-        newCard.appendChild(removeButton);
-    };
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- let newTitle = document.createElement('h1');
-        newTitle.innerText = this.title;
-        let newAuthor = document.createElement('h1');
-        newAuthor.innerText = this.author;
-        let newPages = document.createElement('h1');
-        newPages.innerText = this.pages;
-        let newstatus = document.createElement('h1');
-        newstatus.innerText = this.status;
-*/
