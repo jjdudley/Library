@@ -76,7 +76,7 @@ function render() {
 };
 
 let newbook1 = new Book('The Hobbit', 'J.R.R. Tolkien', '255', 'Read');
-let newbook2 = new Book('Tender Is The Night', 'F. Scott Fitzgerald', '336', 'Not read yet');
+let newbook2 = new Book('Tender Is The Night', 'F. Scott Fitzgerald', '346', 'Not read yet');
 
 addBookToLibrary(newbook1);
 addBookToLibrary(newbook2);
